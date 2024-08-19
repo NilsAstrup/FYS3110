@@ -14,6 +14,7 @@ fig, ax = plt.subplots(3, 1, sharex = True)
 fig.suptitle("Dirac delta visualisation")
 
 for i in range(len(eps_values)):
-    ax[i].plot(x_values, delta(x_values, eps_values[i]),label=f"epsilon = {eps_values[i]}")
+    ax[i].plot(x_values, delta(x_values, eps_values[i]))
+    ax[i].title.set_text(f"epsilon = {eps_values[i]}: ")
 ax[2].set_xlabel("x")
 plt.show()
